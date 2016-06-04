@@ -1,0 +1,23 @@
+{
+  "name": "atxhack4change16",
+  "version": "1.0.0",
+  "description": "Untangle Austin's Problems",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.7.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IntertwineIO/atxhack4change16.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IntertwineIO/atxhack4change16/issues"
+  },
+  "homepage": "https://github.com/IntertwineIO/atxhack4change16#readme"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "atxhack4change16",
+  "homepage": "https://github.com/IntertwineIO/atxhack4change16",
+  "authors": [
+    "Brian Bruggeman <Brian.M.Bruggeman@gmail.com>"
+  ],
+  "description": "Untangle Austin's Problems",
+  "main": "",
+  "keywords": [
+    "Intertwine",
+    "Untangle",
+    "Austin",
+    "Problems"
+  ],
+  "license": "Apache 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.1.0",
+    "bootstrap": "4.0"
+  }
+}
