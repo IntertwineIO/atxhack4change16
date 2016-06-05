@@ -13,12 +13,15 @@ var Geo = React.createClass({
   },
 
   componentDidMount: function() {
-    this.serverRequest = $.get(this.props.source, function (result) {
-      var lastGist = result[0];
-      this.setState({
-        source: lastGist.source,
-        items: lastGist.items
-      });
+    this.serverRequest = $.ajax({
+      url: this.props.source,
+      type: "GET"
+    }).done(
+      function (result) {
+        var lastGist = result[0];
+        this.setState({
+          items: lastGist.items
+    })
     }.bind(this));
   },
 
@@ -41,6 +44,6 @@ var Geo = React.createClass({
 });
 
 ReactDOM.render(
-  <Geo source="/" items={' '} />,
+  <Geo source="/geos" />,
   document.getElementById('main')
 );
