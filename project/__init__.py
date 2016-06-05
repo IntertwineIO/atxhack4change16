@@ -4,13 +4,10 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
 
-def request_wants_json():
+def is_json_request():
     '''Determine if client needs json'''
-    best = request.accept_mimetypes \
-        .best_match(['application/json', 'text/html'])
-    return best == 'application/json' and \
-        request.accept_mimetypes[best] > \
-        request.accept_mimetypes['text/html']
+    best = request.accept_mimetypes.best_match(['application/json', 'text/html'])
+    return best == 'application/json' and request.accept_mimetypes[best] > request.accept_mimetypes['text/html']
 
 
 @app.route('/', defaults={'path': ''})
@@ -30,7 +27,7 @@ def index(path):
     with open('data.json', 'r') as fd:
         data = json.loads(fd.read())
     return_value = ''
-    if request_wants_json():
+    if is_json_request():
         return_value = jsonify(data)
     else:
         return_value = render_template('index.html', path=path, data=data)
