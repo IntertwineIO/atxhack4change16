@@ -32,7 +32,7 @@ var Geo = React.createClass({
     // console.log('Json: ' + JSON.stringify(this.state.json));
     // console.log('Endpoint: ' + this.state.endpoint);
 
-    function blah(geo_data) {
+    function display_geo_data(geo_data) {
         var string = "Name: ";
         if (geo_data.json == "") {
           return geo_data;
@@ -44,9 +44,10 @@ var Geo = React.createClass({
           return string;
         }
     };
+
     return (
       <div>
-        <p>{blah(this.state.json)}</p>
+        <p>{display_geo_data(this.state.json)}</p>
       </div>
     )
   }
